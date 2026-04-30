@@ -1,0 +1,21 @@
+services:
+  localstack:
+    container_name: localstack
+    image: localstack/localstack:4.4.0
+    ports:
+      - "127.0.0.1:4566:4566"
+      - "127.0.0.1:4510-4599:4510-4599"
+    environment:
+      - DEBUG=1
+      - PERSISTENCE=1
+      - DOCKER_HOST=unix://var/run/docker.sock
+      - EXTENSION_AUTO_INSTALL=0
+    volumes:
+      - "./localstack:/var/lib/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    networks:
+      - localstack-network
+
+networks:
+  localstack-network:
+    name: localstack-network
