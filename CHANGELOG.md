@@ -2,6 +2,9 @@
 
 Todas los cambioa notables de este proyecto serán documentadas en este archivo.
 
+## [v1.1.0] - 2026-05-04
+### Añadido
+- Creaciónn de `outputs`  para buckets.
 ## [v1.0] - 2026-05-03
 ### Añadido
 - Creación de infraestructura básica S3 usando Terraform.

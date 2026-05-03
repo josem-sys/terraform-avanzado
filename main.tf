@@ -30,3 +30,9 @@ provider "aws" {
   module "bucket_desplegado" {
     source = "./modules/mi-recurso"
 }
+
+# Output para saber el nombr del bucket
+output "bucket_name" {
+  value       = module.bucket_desplegado
+  description = "El nombre del bucket desplegado desde el módulo"
+}
