@@ -30,6 +30,3 @@ provider "aws" {
   module "bucket_desplegado" {
     source = "./modules/mi-recurso"
 }
-# Comentario para ensuciar 1
-# Comentario para ensuciar 2
-# Comentario para ensuciar 3
